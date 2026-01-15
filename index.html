@@ -5,259 +5,237 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Placeholder Junk Removal | Wichita, KS</title>
 
-  <!-- Font -->
+  <!-- Fonts: strong headline + clean body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- Top bar -->
   <header class="topbar">
-    <div class="container topbar-inner">
-      <span class="pill">Same-Day Pickups</span>
-      <div class="topbar-right">
-        <a class="toplink" href="tel:3165551234">Call: (316) 555-1234</a>
-        <a class="toplink" href="sms:3165551234">Text</a>
+    <div class="wrap topbar__inner">
+      <div class="topbar__left">
+        <span class="dot"></span>
+        <span>Same-Day Pickups • Licensed & Insured</span>
+      </div>
+      <div class="topbar__right">
+        <a href="tel:3165551234">Call (316) 555-1234</a>
+        <a class="ghostlink" href="sms:3165551234">Text Photos</a>
       </div>
     </div>
   </header>
 
   <!-- Nav -->
   <nav class="nav">
-    <div class="container nav-inner">
+    <div class="wrap nav__inner">
       <a class="brand" href="#top">
-        <div class="brand-mark">PJ</div>
-        <div class="brand-text">
+        <span class="brand__mark">PJ</span>
+        <span class="brand__text">
           <strong>Placeholder Junk Removal</strong>
-          <span>Wichita, KS</span>
-        </div>
+          <em>Wichita, KS</em>
+        </span>
       </a>
 
-      <div class="nav-links">
+      <button class="nav__toggle" aria-label="Menu" onclick="toggleMenu()">Menu</button>
+
+      <div class="nav__links" id="navLinks">
         <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
         <a href="#pricing">Pricing</a>
-        <a href="#areas">Service Area</a>
-        <a href="#quote" class="nav-cta">Get Quote</a>
+        <a href="#quote" class="nav__cta">Get Quote</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="hero" id="top">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1>Fast, Clean Junk Removal — Done Today</h1>
-        <p>
-          We haul away furniture, appliances, yard waste, and more.
-          Upfront pricing. Friendly crew. No mess left behind.
+  <main id="top" class="hero">
+    <div class="wrap hero__grid">
+      <section class="hero__copy">
+        <p class="kicker">Junk Removal • Cleanouts • Hauling</p>
+        <h1>Fast, clean junk removal that feels effortless.</h1>
+        <p class="lead">
+          Upfront pricing. Friendly crew. We haul it away and sweep up after — same-day options available.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="tel:3165551234">Call Now</a>
-          <a class="btn ghost" href="#quote">Request a Quote</a>
-          <a class="btn soft" href="#services">See Services</a>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:3165551234">Call Now</a>
+          <a class="btn btn--ghost" href="#quote">Request Quote</a>
+          <a class="btn btn--soft" href="sms:3165551234">Text Photos</a>
         </div>
 
-        <div class="trust-row">
-          <div class="trust-item">⭐ 4.9 Rating (demo)</div>
-          <div class="trust-item">Licensed • Insured</div>
-          <div class="trust-item">Same-Day Options</div>
+        <div class="proof">
+          <div class="proof__item">
+            <strong>4.9★</strong><span>Rating (demo)</span>
+          </div>
+          <div class="proof__item">
+            <strong>Same-Day</strong><span>Options</span>
+          </div>
+          <div class="proof__item">
+            <strong>Licensed</strong><span>& Insured</span>
+          </div>
         </div>
+      </section>
+
+      <aside class="hero__panel">
+        <div class="panel__title">Quick Estimate</div>
+        <div class="panel__sub">Text a photo, get a price range fast.</div>
+
+        <div class="panel__cards">
+          <a class="miniCard" href="sms:3165551234">
+            <span class="miniCard__top">Fastest</span>
+            <span class="miniCard__main">Text Photos</span>
+            <span class="miniCard__sub">Get a quick estimate</span>
+          </a>
+
+          <a class="miniCard" href="tel:3165551234">
+            <span class="miniCard__top">Talk now</span>
+            <span class="miniCard__main">Call Us</span>
+            <span class="miniCard__sub">We answer quickly</span>
+          </a>
+        </div>
+
+        <div class="panel__fine">
+          Demo site — swap branding + number for a real business.
+        </div>
+      </aside>
+    </div>
+
+    <!-- photo strip -->
+    <div class="wrap photos">
+      <div class="photo ph1"></div>
+      <div class="photo ph2"></div>
+      <div class="photo ph3"></div>
+      <div class="photo ph4"></div>
+    </div>
+
+    <!-- angled divider -->
+    <svg class="divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,50 C260,130 520,0 760,70 C1000,140 1200,20 1440,90 L1440,120 L0,120 Z"></path>
+    </svg>
+  </main>
+
+  <!-- Services (no boxy grid; more “designed” list) -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>What we haul</h2>
+        <p>Common jobs — but we’ll remove almost anything non-hazardous.</p>
       </div>
 
-      <div class="hero-card">
-        <div class="hero-card-title">Quick Estimate</div>
-        <div class="hero-card-sub">Send a photo and we’ll respond fast.</div>
-
-        <div class="mini-grid">
-          <div class="mini">
-            <div class="mini-title">Text Photos</div>
-            <div class="mini-sub">Fastest way</div>
-            <a class="mini-btn" href="sms:3165551234">Text Now</a>
-          </div>
-          <div class="mini">
-            <div class="mini-title">Call</div>
-            <div class="mini-sub">Talk to a person</div>
-            <a class="mini-btn" href="tel:3165551234">Call Now</a>
-          </div>
+      <div class="serviceRows">
+        <div class="serviceRow">
+          <div class="serviceRow__name">Furniture & Mattresses</div>
+          <div class="serviceRow__desc">Couches, beds, dressers, nightstands, frames.</div>
         </div>
-
-        <div class="small-note">Demo site — swap phone number + branding for each client.</div>
+        <div class="serviceRow">
+          <div class="serviceRow__name">Appliance Removal</div>
+          <div class="serviceRow__desc">Fridges, washers/dryers, stoves, dishwashers.</div>
+        </div>
+        <div class="serviceRow">
+          <div class="serviceRow__name">Garage & Storage Cleanouts</div>
+          <div class="serviceRow__desc">Clutter, boxes, old tools, misc. junk piles.</div>
+        </div>
+        <div class="serviceRow">
+          <div class="serviceRow__name">Yard Waste & Debris</div>
+          <div class="serviceRow__desc">Branches, bags, storm debris, small demolition trash.</div>
+        </div>
+        <div class="serviceRow highlightRow">
+          <div class="serviceRow__name">Same-Day Pickup</div>
+          <div class="serviceRow__desc">Call or text photos — we’ll give the soonest opening.</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Why choose us -->
-  <section class="section section-soft">
-    <div class="container">
-      <div class="section-head">
-        <h2>Why People Choose Us</h2>
-        <p class="muted">Simple process, clear pricing, and a crew you can trust.</p>
+  <!-- Process -->
+  <section id="process" class="section section--soft">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>How it works</h2>
+        <p>Simple, fast, and clean — no drama.</p>
       </div>
 
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>Upfront Pricing</h3>
-          <p>Know the cost before we haul anything away.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step__num">01</span>
+          <h3>Send photos or call</h3>
+          <p>Text a photo for the fastest estimate means you don’t waste time.</p>
         </div>
-        <div class="feature">
-          <h3>Same-Day Options</h3>
-          <p>Perfect for last-minute cleanouts and move-outs.</p>
+        <div class="step">
+          <span class="step__num">02</span>
+          <h3>We give a price range</h3>
+          <p>Upfront pricing based on volume + items. No surprises.</p>
         </div>
-        <div class="feature">
-          <h3>We Sweep Up</h3>
-          <p>No mess left behind — we clean the area after.</p>
-        </div>
-        <div class="feature">
-          <h3>Responsible Disposal</h3>
-          <p>Donate and recycle whenever possible.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head">
-        <h2>Junk Removal Services</h2>
-        <p class="muted">Residential + commercial hauling. Big or small, we do it all.</p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Furniture & Mattresses</h3>
-          <p>Couches, beds, dressers, and more.</p>
-        </div>
-        <div class="card">
-          <h3>Appliance Removal</h3>
-          <p>Fridges, washers, dryers, stoves.</p>
-        </div>
-        <div class="card">
-          <h3>Garage / Storage Cleanouts</h3>
-          <p>Clear out clutter in one visit.</p>
-        </div>
-        <div class="card">
-          <h3>Yard Waste & Debris</h3>
-          <p>Branches, bags, storm debris.</p>
-        </div>
-        <div class="card">
-          <h3>Move-Out Cleanouts</h3>
-          <p>Rental properties, evictions, remodels.</p>
-        </div>
-        <div class="card highlight">
-          <h3>Same-Day Pickup</h3>
-          <p>Call or text — we’ll give you the soonest opening.</p>
+        <div class="step">
+          <span class="step__num">03</span>
+          <h3>We haul & sweep</h3>
+          <p>We remove everything and clean up the area after.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section class="section section-soft" id="pricing">
-    <div class="container">
-      <div class="section-head">
-        <h2>Simple Pricing</h2>
-        <p class="muted">Price is based on volume + items. Here’s a clean demo structure:</p>
+  <section id="pricing" class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Pricing (demo)</h2>
+        <p>Most jobs are priced by volume. Use this structure for demos.</p>
       </div>
 
-      <div class="pricing-grid">
-        <div class="price-card">
-          <h3>Small Load</h3>
-          <div class="price">$99–$149</div>
-          <ul>
-            <li>Single item or a few bags</li>
-            <li>Ideal for quick pickups</li>
-            <li>Same-day may be available</li>
-          </ul>
+      <div class="priceGrid">
+        <div class="price">
+          <div class="price__name">Small</div>
+          <div class="price__num">$99–$149</div>
+          <div class="price__hint">Single item / few bags</div>
         </div>
-
-        <div class="price-card popular">
-          <div class="badge">Most Popular</div>
-          <h3>Medium Load</h3>
-          <div class="price">$199–$299</div>
-          <ul>
-            <li>1/4 to 1/2 truck</li>
-            <li>Furniture + appliances</li>
-            <li>Best value for cleanouts</li>
-          </ul>
+        <div class="price price--featured">
+          <div class="price__badge">Most Popular</div>
+          <div class="price__name">Medium</div>
+          <div class="price__num">$199–$299</div>
+          <div class="price__hint">1/4–1/2 truck</div>
         </div>
-
-        <div class="price-card">
-          <h3>Full Load</h3>
-          <div class="price">$399–$699</div>
-          <ul>
-            <li>1/2 to full truck</li>
-            <li>Move-outs / garage cleanouts</li>
-            <li>Commercial hauling available</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="fineprint">
-        *Demo pricing. Replace with your real pricing model or “free on-site estimate.”
-      </div>
-    </div>
-  </section>
-
-  <!-- Service area -->
-  <section class="section" id="areas">
-    <div class="container">
-      <div class="section-head">
-        <h2>Serving Wichita & Nearby Areas</h2>
-        <p class="muted">We typically service Wichita + surrounding communities.</p>
-      </div>
-
-      <div class="area-grid">
-        <div class="area card">
-          <h3>Main Areas</h3>
-          <p>Wichita • Derby • Andover • Maize • Goddard</p>
-        </div>
-        <div class="area card">
-          <h3>Also Serving</h3>
-          <p>Haysville • Park City • Valley Center • Bel Aire</p>
-        </div>
-        <div class="area card">
-          <h3>Fast Directions</h3>
-          <button class="btn soft" type="button"
-            onclick="openDirections('Wichita, KS')">Open Maps</button>
+        <div class="price">
+          <div class="price__name">Full</div>
+          <div class="price__num">$399–$699</div>
+          <div class="price__hint">1/2–full truck</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Quote -->
-  <section class="section section-soft" id="quote">
-    <div class="container">
-      <div class="section-head">
-        <h2>Request a Quote</h2>
-        <p class="muted">Demo form — shows how lead capture works without a backend.</p>
+  <section id="quote" class="section section--soft">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Request a quote</h2>
+        <p>Demo form — shows how lead capture feels.</p>
       </div>
 
       <form class="form" onsubmit="event.preventDefault(); showThanks();">
-        <div class="form-grid">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <select name="service" required>
-            <option value="">What do you need removed?</option>
+        <div class="form__grid">
+          <input type="text" placeholder="Your name" required>
+          <input type="tel" placeholder="Phone number" required>
+          <input type="text" placeholder="City / area (optional)">
+          <select required>
+            <option value="">What needs removed?</option>
             <option>Furniture</option>
             <option>Appliances</option>
-            <option>Garage / Storage</option>
+            <option>Garage Cleanout</option>
             <option>Yard Waste</option>
-            <option>Move-Out Cleanout</option>
+            <option>Move-Out</option>
             <option>Other</option>
           </select>
-          <input type="text" name="address" placeholder="City / Area (optional)">
         </div>
+        <textarea rows="4" placeholder="Describe the items (and mention if you can text photos)."></textarea>
 
-        <textarea name="details" rows="4" placeholder="Describe the items (and mention if you can text photos)."></textarea>
-
-        <div class="form-actions">
-          <button class="btn primary" type="submit">Send Request</button>
-          <a class="btn ghost" href="sms:3165551234">Text Photos Instead</a>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">Send Request</button>
+          <a class="btn btn--ghost" href="sms:3165551234">Text Photos Instead</a>
         </div>
 
         <div id="thanks" class="thanks" aria-live="polite"></div>
@@ -266,45 +244,37 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="container footer-inner">
+  <footer class="footer">
+    <div class="wrap footer__inner">
       <div>
         <strong>Placeholder Junk Removal</strong>
         <div class="muted">Wichita, KS • Licensed & Insured</div>
       </div>
-      <div class="footer-links">
+      <div class="footer__links">
         <a href="tel:3165551234">(316) 555-1234</a>
         <a href="sms:3165551234">Text Us</a>
       </div>
     </div>
-    <div class="container footer-bottom muted">
-      © 2026 Placeholder Junk Removal • Demo website
+
+    <div class="wrap footer__bottom muted">
+      © 2026 Placeholder Junk Removal • Demo site
     </div>
   </footer>
 
-  <!-- Sticky Mobile CTA -->
-  <div class="mobile-cta">
-    <a class="mbtn" href="tel:3165551234">Call</a>
-    <a class="mbtn primary" href="#quote">Get Quote</a>
-    <a class="mbtn" href="sms:3165551234">Text</a>
+  <!-- Sticky mobile CTA -->
+  <div class="mobilebar">
+    <a class="mobilebar__btn" href="tel:3165551234">Call</a>
+    <a class="mobilebar__btn mobilebar__btn--primary" href="#quote">Quote</a>
+    <a class="mobilebar__btn" href="sms:3165551234">Text</a>
   </div>
 
   <script>
     function showThanks() {
-      const el = document.getElementById("thanks");
-      el.textContent = "✅ Demo: Request sent! In a real site, this can text/email the owner instantly.";
+      document.getElementById("thanks").textContent =
+        "✅ Demo: Request sent! (On a real site this can text/email the owner instantly.)";
     }
-
-    function openDirections(address) {
-      const encoded = encodeURIComponent(address);
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-      // iPhone users tend to prefer Apple Maps; others default to Google Maps
-      const url = isIOS
-        ? `https://maps.apple.com/?q=${encoded}`
-        : `https://www.google.com/maps/search/?api=1&query=${encoded}`;
-
-      window.open(url, "_blank");
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("open");
     }
   </script>
 
