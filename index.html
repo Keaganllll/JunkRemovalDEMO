@@ -5,31 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Placeholder Junk Removal | Wichita, KS</title>
 
-  <!-- Same Google font from HVAC -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<header class="top-bar">
-  <div class="container">
-    <span>Same-Day Pickups • Licensed & Insured</span>
-    <a href="tel:3165551234">(316) 555-1234</a>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">Same-Day Pickups • Licensed & Insured • Serving Wichita & nearby</div>
+    <a class="topbar-phone" href="tel:3165551234">(316) 555-1234</a>
   </div>
 </header>
 
 <nav class="nav">
   <div class="container nav-inner">
-    <div class="logo">
-      <strong>Placeholder Junk Removal</strong>
-      <span>Wichita, KS</span>
-    </div>
-    <div class="nav-links">
+    <a class="brand" href="#">
+      <span class="brand-mark">PJ</span>
+      <span class="brand-text">
+        <strong>Placeholder Junk Removal</strong>
+        <em>Wichita, KS</em>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+
+    <div class="nav-links" data-nav>
       <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
       <a href="#quote">Get Quote</a>
       <a href="#areas">Areas</a>
       <a href="#contact">Contact</a>
@@ -38,80 +46,237 @@
 </nav>
 
 <section class="hero">
-  <div class="container hero-content">
-    <h1>Junk removal made simple, fast, and reliable</h1>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Junk Removal • Cleanouts • Hauling</div>
 
-    <p>Top-rated service in Wichita, same-day options available and upfront pricing so you always know what to expect.</p>
+      <h1>Fast, clean junk removal that feels effortless.</h1>
 
-    <div class="hero-actions">
-      <a class="btn primary" href="tel:3165551234">Call Now</a>
-      <a class="btn ghost" href="#quote">Request Quote</a>
-      <a class="btn soft" href="sms:3165551234">Text Photos</a>
+      <p class="subhead">
+        Upfront pricing. Friendly crew. We haul it away and sweep up after — same-day options available.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="tel:3165551234">Call Now</a>
+        <a class="btn" href="#quote">Request Quote</a>
+        <a class="btn soft" href="sms:3165551234">Text Photos</a>
+      </div>
+
+      <div class="trust-row">
+        <div class="trust-pill">⭐ 4.9 Rating (demo)</div>
+        <div class="trust-pill">Same-Day Options</div>
+        <div class="trust-pill">Licensed & Insured</div>
+        <div class="trust-pill">Quick Estimate</div>
+      </div>
+
+      <div class="micro">
+        Text a photo, get a price range fast. <a href="#quote">Get a quick estimate</a> • <a href="tel:3165551234">Talk now</a>
+      </div>
     </div>
 
-    <div class="trust">
-      ⭐⭐⭐⭐⭐ 4.9 Rating (demo) • Licensed & Insured • Same-Day Options
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <strong>Quick Quote</strong>
+        <span>We’ll reply within 15–60 minutes (demo).</span>
+      </div>
+
+      <form class="form" onsubmit="event.preventDefault(); alert('Demo form — connect later (Email/Forms/SMS).');">
+        <label>
+          <span>Name</span>
+          <input type="text" placeholder="Your name" required>
+        </label>
+
+        <label>
+          <span>Phone</span>
+          <input type="tel" placeholder="(316) 555-1234" required>
+        </label>
+
+        <label>
+          <span>Service</span>
+          <select required>
+            <option value="">Select one</option>
+            <option>Single Item Pickup</option>
+            <option>Furniture / Appliance</option>
+            <option>Garage Cleanout</option>
+            <option>Yard Waste</option>
+            <option>Estate / Move-out</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Details</span>
+          <textarea rows="3" placeholder="What needs removed? (Optional)"></textarea>
+        </label>
+
+        <button class="btn primary full" type="submit">Request Quote</button>
+
+        <p class="form-note">Prefer texting? <a href="sms:3165551234">Send photos</a> for a faster range.</p>
+      </form>
     </div>
   </div>
 </section>
 
 <section id="services" class="section">
   <div class="container">
-    <h2>Services We Offer</h2>
+    <div class="section-head">
+      <h2>Services</h2>
+      <p>Clean, quick, and careful removal — residential & light commercial.</p>
+    </div>
 
     <div class="grid">
-      <div class="card">Furniture Removal</div>
-      <div class="card">Appliance Pickup</div>
-      <div class="card">Garage Cleanouts</div>
-      <div class="card">Yard Waste Removal</div>
-      <div class="card">Estate Cleanouts</div>
-      <div class="card highlight">Same-Day Removal</div>
+      <div class="card">
+        <h3>Furniture Removal</h3>
+        <p>Couches, dressers, mattresses, tables — we do the lifting.</p>
+      </div>
+      <div class="card">
+        <h3>Appliance Pickup</h3>
+        <p>Fridges, washers, dryers, stoves — hauled away safely.</p>
+      </div>
+      <div class="card">
+        <h3>Garage Cleanouts</h3>
+        <p>Clear the clutter fast and get your space back.</p>
+      </div>
+      <div class="card">
+        <h3>Yard Waste</h3>
+        <p>Branches, brush, bags, and debris — cleaned up right.</p>
+      </div>
+      <div class="card">
+        <h3>Estate / Move-out</h3>
+        <p>Room-by-room cleanouts with respectful, careful handling.</p>
+      </div>
+      <div class="card highlight">
+        <h3>Same-Day Removal</h3>
+        <p>Need it gone today? We’ll fit you in when possible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section soft">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2>How it works</h2>
+        <p>Simple process. No headaches.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span>1</span><div><strong>Send details</strong><p>Call, request a quote, or text photos.</p></div></div>
+        <div class="step"><span>2</span><div><strong>Get an upfront price</strong><p>We confirm the scope and give a clear estimate.</p></div></div>
+        <div class="step"><span>3</span><div><strong>We haul it away</strong><p>We load up, sweep up, and you’re done.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Pricing</h2>
+      <p>Honest pricing based on volume and difficulty. (Demo ranges)</p>
+    </div>
+
+    <div class="pricing">
+      <div class="price-card">
+        <h3>Single Item</h3>
+        <div class="price">$75–$150</div>
+        <ul>
+          <li>One large item or a few small</li>
+          <li>Includes haul + disposal</li>
+          <li>Fast scheduling</li>
+        </ul>
+        <a class="btn" href="#quote">Get exact price</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="badge">Most common</div>
+        <h3>Half Load</h3>
+        <div class="price">$250–$450</div>
+        <ul>
+          <li>Garage corner / room cleanout</li>
+          <li>2-person crew</li>
+          <li>Sweep-up included</li>
+        </ul>
+        <a class="btn primary" href="#quote">Request quote</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Full Load</h3>
+        <div class="price">$500–$850</div>
+        <ul>
+          <li>Whole garage / big cleanout</li>
+          <li>Dump fees included</li>
+          <li>Best value per item</li>
+        </ul>
+        <a class="btn" href="#quote">Check availability</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="quote" class="section soft">
   <div class="container">
-    <h2>Request a Quick Quote</h2>
-    <p>We’ll call or text you back within 15–60 minutes (demo).</p>
-
-    <form class="quote-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <select required>
-        <option value="">What's being removed?</option>
-        <option>Furniture</option>
-        <option>Appliances</option>
-        <option>Yard Waste</option>
-        <option>Cleanout</option>
-        <option>Other</option>
-      </select>
-      <button type="submit" class="btn primary">Send Request</button>
-    </form>
+    <div class="cta-box">
+      <div>
+        <h2>Request a quote</h2>
+        <p>Fast response. Same-day options available.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn primary" href="tel:3165551234">Call Now</a>
+        <a class="btn soft" href="sms:3165551234">Text Photos</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="areas" class="section">
   <div class="container">
-    <h2>Service Areas</h2>
-    <p>Wichita • Derby • Andover • Maize • Goddard • Park City</p>
+    <div class="section-head">
+      <h2>Service areas</h2>
+      <p>Wichita • Derby • Andover • Maize • Goddard • Park City • Valley Center</p>
+    </div>
+
+    <div class="areas">
+      <div class="area-card">
+        <h3>Based in Wichita</h3>
+        <p>Local crew with flexible scheduling.</p>
+      </div>
+      <div class="area-card">
+        <h3>Fast response</h3>
+        <p>Call/text and we’ll get you a time window.</p>
+      </div>
+      <div class="area-card">
+        <h3>Clean finish</h3>
+        <p>We sweep up after loading.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="final">
-  <div class="container">
-    <h2>Need Junk Removed Today?</h2>
-    <p>Call or text now — we answer fast and show up ready to work.</p>
-    <a class="btn primary large" href="tel:3165551234">Call Now</a>
-  </div>
-</section>
+<footer id="contact" class="footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <strong>Placeholder Junk Removal</strong>
+      <span>Wichita, KS</span>
+      <small>© 2026 • Demo site</small>
+    </div>
 
-<footer id="contact">
-  <div class="container footer">
-    <p>© 2026 Placeholder Junk Removal • Wichita, KS</p>
-    <a href="tel:3165551234">(316) 555-1234</a>
+    <div class="footer-right">
+      <a class="btn tiny" href="tel:3165551234">Call (316) 555-1234</a>
+      <a class="btn tiny soft" href="sms:3165551234">Text Photos</a>
+    </div>
   </div>
 </footer>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('[data-nav]');
+  btn?.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Close' : 'Menu';
+  });
+</script>
 
 </body>
 </html>
