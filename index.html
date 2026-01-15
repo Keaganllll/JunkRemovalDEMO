@@ -5,278 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Placeholder Junk Removal | Wichita, KS</title>
 
-  <!-- Fonts: strong headline + clean body -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="wrap topbar__inner">
-      <div class="topbar__left">
-        <span class="dot"></span>
-        <span>Same-Day Pickups • Licensed & Insured</span>
-      </div>
-      <div class="topbar__right">
-        <a href="tel:3165551234">Call (316) 555-1234</a>
-        <a class="ghostlink" href="sms:3165551234">Text Photos</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="wrap nav__inner">
-      <a class="brand" href="#top">
-        <span class="brand__mark">PJ</span>
-        <span class="brand__text">
-          <strong>Placeholder Junk Removal</strong>
-          <em>Wichita, KS</em>
-        </span>
-      </a>
-
-      <button class="nav__toggle" aria-label="Menu" onclick="toggleMenu()">Menu</button>
-
-      <div class="nav__links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#process">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#quote" class="nav__cta">Get Quote</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <main id="top" class="hero">
-    <div class="wrap hero__grid">
-      <section class="hero__copy">
-        <p class="kicker">Junk Removal • Cleanouts • Hauling</p>
-        <h1>Fast, clean junk removal that feels effortless.</h1>
-        <p class="lead">
-          Upfront pricing. Friendly crew. We haul it away and sweep up after — same-day options available.
-        </p>
-
-        <div class="actions">
-          <a class="btn btn--primary" href="tel:3165551234">Call Now</a>
-          <a class="btn btn--ghost" href="#quote">Request Quote</a>
-          <a class="btn btn--soft" href="sms:3165551234">Text Photos</a>
-        </div>
-
-        <div class="proof">
-          <div class="proof__item">
-            <strong>4.9★</strong><span>Rating (demo)</span>
-          </div>
-          <div class="proof__item">
-            <strong>Same-Day</strong><span>Options</span>
-          </div>
-          <div class="proof__item">
-            <strong>Licensed</strong><span>& Insured</span>
-          </div>
-        </div>
-      </section>
-
-      <aside class="hero__panel">
-        <div class="panel__title">Quick Estimate</div>
-        <div class="panel__sub">Text a photo, get a price range fast.</div>
-
-        <div class="panel__cards">
-          <a class="miniCard" href="sms:3165551234">
-            <span class="miniCard__top">Fastest</span>
-            <span class="miniCard__main">Text Photos</span>
-            <span class="miniCard__sub">Get a quick estimate</span>
-          </a>
-
-          <a class="miniCard" href="tel:3165551234">
-            <span class="miniCard__top">Talk now</span>
-            <span class="miniCard__main">Call Us</span>
-            <span class="miniCard__sub">We answer quickly</span>
-          </a>
-        </div>
-
-        <div class="panel__fine">
-          Demo site — swap branding + number for a real business.
-        </div>
-      </aside>
-    </div>
-
-    <!-- photo strip -->
-    <div class="wrap photos">
-      <div class="photo ph1"></div>
-      <div class="photo ph2"></div>
-      <div class="photo ph3"></div>
-      <div class="photo ph4"></div>
-    </div>
-
-    <!-- angled divider -->
-    <svg class="divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,50 C260,130 520,0 760,70 C1000,140 1200,20 1440,90 L1440,120 L0,120 Z"></path>
-    </svg>
-  </main>
-
-  <!-- Services (no boxy grid; more “designed” list) -->
-  <section id="services" class="section">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>What we haul</h2>
-        <p>Common jobs — but we’ll remove almost anything non-hazardous.</p>
-      </div>
-
-      <div class="serviceRows">
-        <div class="serviceRow">
-          <div class="serviceRow__name">Furniture & Mattresses</div>
-          <div class="serviceRow__desc">Couches, beds, dressers, nightstands, frames.</div>
-        </div>
-        <div class="serviceRow">
-          <div class="serviceRow__name">Appliance Removal</div>
-          <div class="serviceRow__desc">Fridges, washers/dryers, stoves, dishwashers.</div>
-        </div>
-        <div class="serviceRow">
-          <div class="serviceRow__name">Garage & Storage Cleanouts</div>
-          <div class="serviceRow__desc">Clutter, boxes, old tools, misc. junk piles.</div>
-        </div>
-        <div class="serviceRow">
-          <div class="serviceRow__name">Yard Waste & Debris</div>
-          <div class="serviceRow__desc">Branches, bags, storm debris, small demolition trash.</div>
-        </div>
-        <div class="serviceRow highlightRow">
-          <div class="serviceRow__name">Same-Day Pickup</div>
-          <div class="serviceRow__desc">Call or text photos — we’ll give the soonest opening.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section id="process" class="section section--soft">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>How it works</h2>
-        <p>Simple, fast, and clean — no drama.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step">
-          <span class="step__num">01</span>
-          <h3>Send photos or call</h3>
-          <p>Text a photo for the fastest estimate means you don’t waste time.</p>
-        </div>
-        <div class="step">
-          <span class="step__num">02</span>
-          <h3>We give a price range</h3>
-          <p>Upfront pricing based on volume + items. No surprises.</p>
-        </div>
-        <div class="step">
-          <span class="step__num">03</span>
-          <h3>We haul & sweep</h3>
-          <p>We remove everything and clean up the area after.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing" class="section">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>Pricing (demo)</h2>
-        <p>Most jobs are priced by volume. Use this structure for demos.</p>
-      </div>
-
-      <div class="priceGrid">
-        <div class="price">
-          <div class="price__name">Small</div>
-          <div class="price__num">$99–$149</div>
-          <div class="price__hint">Single item / few bags</div>
-        </div>
-        <div class="price price--featured">
-          <div class="price__badge">Most Popular</div>
-          <div class="price__name">Medium</div>
-          <div class="price__num">$199–$299</div>
-          <div class="price__hint">1/4–1/2 truck</div>
-        </div>
-        <div class="price">
-          <div class="price__name">Full</div>
-          <div class="price__num">$399–$699</div>
-          <div class="price__hint">1/2–full truck</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote -->
-  <section id="quote" class="section section--soft">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>Request a quote</h2>
-        <p>Demo form — shows how lead capture feels.</p>
-      </div>
-
-      <form class="form" onsubmit="event.preventDefault(); showThanks();">
-        <div class="form__grid">
-          <input type="text" placeholder="Your name" required>
-          <input type="tel" placeholder="Phone number" required>
-          <input type="text" placeholder="City / area (optional)">
-          <select required>
-            <option value="">What needs removed?</option>
-            <option>Furniture</option>
-            <option>Appliances</option>
-            <option>Garage Cleanout</option>
-            <option>Yard Waste</option>
-            <option>Move-Out</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <textarea rows="4" placeholder="Describe the items (and mention if you can text photos)."></textarea>
-
-        <div class="form__actions">
-          <button class="btn btn--primary" type="submit">Send Request</button>
-          <a class="btn btn--ghost" href="sms:3165551234">Text Photos Instead</a>
-        </div>
-
-        <div id="thanks" class="thanks" aria-live="polite"></div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div>
-        <strong>Placeholder Junk Removal</strong>
-        <div class="muted">Wichita, KS • Licensed & Insured</div>
-      </div>
-      <div class="footer__links">
-        <a href="tel:3165551234">(316) 555-1234</a>
-        <a href="sms:3165551234">Text Us</a>
-      </div>
-    </div>
-
-    <div class="wrap footer__bottom muted">
-      © 2026 Placeholder Junk Removal • Demo site
-    </div>
-  </footer>
-
-  <!-- Sticky mobile CTA -->
-  <div class="mobilebar">
-    <a class="mobilebar__btn" href="tel:3165551234">Call</a>
-    <a class="mobilebar__btn mobilebar__btn--primary" href="#quote">Quote</a>
-    <a class="mobilebar__btn" href="sms:3165551234">Text</a>
+<!-- TOP BAR -->
+<header class="top-bar">
+  <div class="container">
+    <span>Same-Day Pickups • Licensed & Insured</span>
+    <a href="tel:3165551234">(316) 555-1234</a>
   </div>
+</header>
 
-  <script>
-    function showThanks() {
-      document.getElementById("thanks").textContent =
-        "✅ Demo: Request sent! (On a real site this can text/email the owner instantly.)";
-    }
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("open");
-    }
-  </script>
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="logo">
+      <strong>Placeholder Junk Removal</strong>
+      <span>Wichita, KS</span>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#quote">Get Quote</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="kicker">Junk Removal • Cleanouts • Hauling</span>
+
+    <h1>Fast, clean junk removal that feels effortless.</h1>
+
+    <p>
+      Upfront pricing. Friendly crew. We haul it away and sweep up after —
+      same-day options available.
+    </p>
+
+    <div class="hero-actions">
+      <a href="tel:3165551234" class="btn primary">Call Now</a>
+      <a href="#quote" class="btn secondary">Request Quote</a>
+      <a href="sms:3165551234" class="btn ghost">Text Photos</a>
+    </div>
+
+    <div class="trust">
+      ⭐⭐⭐⭐⭐ 4.9 Rating (Demo) • Same-Day Options • Licensed & Insured
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <h2>Our Services</h2>
+
+    <div class="grid">
+      <div class="card">Furniture & Appliance Removal</div>
+      <div class="card">Garage & Storage Cleanouts</div>
+      <div class="card">Estate & Eviction Cleanouts</div>
+      <div class="card">Construction Debris</div>
+      <div class="card">Yard Waste & Brush</div>
+      <div class="card highlight">Same-Day Junk Removal</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section id="quote" class="section soft">
+  <div class="container">
+    <h2>Get a Quick Estimate</h2>
+    <p>Text or call back within 15–60 minutes (demo).</p>
+
+    <form class="quote-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <select required>
+        <option value="">Service Needed</option>
+        <option>Junk Removal</option>
+        <option>Cleanout</option>
+        <option>Large Item Pickup</option>
+        <option>Other</option>
+      </select>
+      <button type="submit" class="btn primary">Request Quote</button>
+    </form>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section id="areas" class="section">
+  <div class="container">
+    <h2>Service Areas</h2>
+    <p>Wichita • Derby • Andover • Maize • Goddard • Park City</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="container">
+    <h2>Need Junk Gone Today?</h2>
+    <p>Send a photo or give us a call — we answer fast.</p>
+    <a href="tel:3165551234" class="btn primary large">Call Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container footer">
+    <p>© 2026 Placeholder Junk Removal • Wichita, KS</p>
+    <a href="tel:3165551234">(316) 555-1234</a>
+  </div>
+</footer>
 
 </body>
 </html>
